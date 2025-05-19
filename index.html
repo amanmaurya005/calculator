@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+<div class="one">
+    <div class="second">
+    <input type="number" id="inp1" placeholder="Enter your first value"><br>
+    <select name="" id="oppretions">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select><br>
+    <input type="number" id="inp2" placeholder="Enter your second value"><br>
+    <button id="submit">Submit</button><br>
+    <input  id="result" placeholder="answer" readonly><br>
+    
+    </div>
+</div>
+
+</div>
+
+<script>
+    
+   
+    let button=document.getElementById("submit")
+    button.addEventListener("click",()=>{
+
+
+         let input1=Number(document.getElementById("inp1").value);
+    let oppretions=document.getElementById("oppretions").value;
+    let input2=Number(document.getElementById("inp2").value);
+    
+       let ans=""; 
+
+ 
+
+    if(oppretions=="+")
+    {
+        ans=input1+input2;
+        
+    }
+    else if(oppretions=="-")
+    {
+        ans=input1-input2;
+      
+    }
+    else if(oppretions=="*")
+    {
+        ans=input1*input2;
+       
+    }
+    else if(oppretions=="/")
+    {
+        ans=input1/input2;
+    
+    }
+    else if(oppretions=="%")
+    {
+        ans=input1%input2;
+       
+    }
+     document.getElementById("result").value=ans;
+    
+    })
+    
+</script>
+
+</body>
+</html>
